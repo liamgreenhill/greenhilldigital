@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Greenhill FLD Limited">
+
+<meta name="robots" content="index, follow">
+
+<title>React Native versus Ionic 2 | Greenhill</title>
+<meta name="description" content="&lt;p&gt;Evaluating differences, benefits and drawbacks.&lt;/p&gt;">
+
+<meta property="og:site_name" content="Greenhill Journal" />
+<meta property="og:url" content="https://www.greenhilldigital.com/journal/react-native-versus-ionic-2" />
+<meta property="og:title" content="React Native versus Ionic 2" />
+<meta property="og:description" content="Having used Ionic 2 on two recent mobile app projects, I decided to use my most recent training days to check out React Native as an alternative. Here, I evaluate the differences, benefits and drawbacks." /><meta property="og:type" content="article" />
+<meta property="article:author" content="" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:title" content="React Native versus Ionic 2" />
+<meta name="twitter:description" content="Having used Ionic 2 on two recent mobile app projects, I decided to use my most recent training days to check out React Native as an alternative. Here, I evaluate the differences, benefits and drawbacks." /><meta name="twitter:url" content="https://www.greenhilldigital.com/journal/react-native-versus-ionic-2" /><link href="/console/addons/apps/perch_blog/endpoint/?pid=7" rel="webmention">
+<link rel='canonical' href="https://www.greenhilldigital.com/journal/react-native-versus-ionic-2">
+
+<link href="https://www.greenhilldigital.com/journal/rss" rel="alternate" type="application/rss+xml" title="Greenhill Journal RSS feed">
+<link href="https://www.greenhilldigital.com/journal/jsonfeed.json" rel="alternate" type="application/json" title="Greenhill Journal JSON feed">
+
+<!-- <link rel="manifest" href="site.webmanifest"> -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- PWA Splash images for iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+
+
+<script type="text/javascript">
+    var MTUserId='1b677d22-39fd-44f6-8625-1806c06a6550';
+    var MTFontIds = new Array();
+
+    MTFontIds.push("1475508"); // Avenir® W01 45 Book
+    MTFontIds.push("1475514"); // Avenir® W01 45 Book Oblique
+    MTFontIds.push("1475532"); // Avenir® W01 65 Medium
+    MTFontIds.push("1475538"); // Avenir® W01 65 Medium Oblique
+    MTFontIds.push("1475556"); // Avenir® W01 95 Black
+    MTFontIds.push("1475562"); // Avenir® W01 95 Black Oblique
+    (function() {
+        var mtTracking = document.createElement('script');
+        mtTracking.type='text/javascript';
+        mtTracking.async='true';
+        mtTracking.src='/js/mtiFontTrackingCode.js';
+
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(mtTracking);
+    })();
+</script>
+
+<link rel="serviceworker" href="/serviceworker.js">
+
+<link rel="stylesheet" href="/css/screen_v5.css">
+
+<meta name="theme-color" content="#ffffff">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-17084064-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-17084064-1');
+</script>
+
+</head>
+<body class="section-journal">
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<header role="banner">
+
+    <div id="header-global">
+
+        <div id="logo">
+        <a href="https://www.greenhilldigital.com" title="Home"><span>Greenhill</span></a>
+        </div>
+
+        <ul id="header-contact-methods">
+        <li><a id="header-tel" href="tel:+441413327051">Call +44 (0)141 332 7051</a></li>
+        <li><a id="header-contact-us" href="mailto:info@greenhilldigital.com">Message us</a></li>
+        <li><a id="header-visit-us" href="https://goo.gl/maps/beb15WjNWJP2">Visit us</a></li>
+        </ul>
+
+        <nav aria-label="site">
+        <ul id="global-navigation">
+        <li id="nav-services"><a href="/services/" title="What we do">Services</a></li>
+        <li id="nav-portfolio"><a href="/portfolio/" title="A selection of our work">Portfolio</a></li>
+        <li id="nav-about"><a href="/about/" title="Find out more about us">About</a></li>
+        <li id="nav-journal" class="active"><a href="/journal/" title="Our latest opinion, thoughts and discoveries">Journal</a></li>
+        <li id="nav-contact"><a href="/contact/" title="Contact us">Contact</a></li>
+        </ul>
+        </nav>
+
+    </div>
+
+    
+</header>
+
+<main id="journal-entry-main">
+
+<!-- <button id="notifications">Send dummy notifications</button> -->
+
+<article class="h-entry">
+
+    
+        <!-- <a href="archive.php?cat=technology" class="p-category"> -->
+            
+        <!-- </a> -->
+    
+
+    <!-- <a href="/journal/react-native-versus-ionic-2" rel="bookmark">bookmark icon</a> -->
+    <h1 class="p-name">React Native versus Ionic 2</h1>
+    <p class="byline">
+        <span class="author-and-date">by <span class="p-author h-card">Samantha Kirkwood</span> <time class="dt-published" datetime="2018-07-19 08:50:00">19 July 2018</time></span> 
+    </p>
+    
+    <p class="standfirst">Having used Ionic 2 on two recent mobile app projects, I spent a training day checking out React Native to see how it stacks up as an alternative. Here, I evaluate the differences, benefits and drawbacks.</p>
+
+    
+    <div class="article-body description e-content">
+        <h2>Ionic</h2>
+
+<p><a href="https://ionicframework.com/">Ionic</a> is an easy to use, hybrid application framework utilising Angular 2, TypeScript and HTML5, with several well documented built-in components.</p>
+
+<h3>Speed and simplicity</h3>
+<p>Ionic’s nature makes the mobile development process easier and quicker, with little training required for Angular developers to get started. Code is written once and can be compiled into Android, iOS or Windows applications. It’s a great concept for speeding up and removing barriers to mobile development.</p>
+
+<p>However, there are some drawbacks to using Ionic.</p>
+
+<h3>The web layer and performance</h3>
+
+<p>Performance is impacted by the need for a web layer over the native features. This isn’t a major issue for smaller applications, however it can impact when an application becomes more demanding on performance. Also, as much as the built-in components are very useful in saving time, there have some bugs, and customising them can feel excessively tricky at times. It’s just not so intuitive or simple to apply a personalised feel to an application built with Ionic.</p> 
+
+<h3>Testing can be <em>testing</em></h3>
+
+<p>A further, but minor, drawback I noticed is that testing during development is done quickest in the browser. To view code updates on a real device or a simulator, the project must be rebuilt every time. This is usually fine, but sometimes OS/device-specific errors or differences can go unnoticed, requiring several additional builds to rectify and test these issues.</p>
+
+<h2>React Native</h2>
+
+<p>With the above concerns in mind, I decided to look into <a href="https://facebook.github.io/react-native/">React Native</a> – which is frequently compared to Ionic and often preferred. I wanted to see for myself if the learning curve was worthwhile, and also get a feel for the differences, benefits and drawbacks of React Native compared with Ionic 2.</p>
+
+<h3>Better simulator integration</h3>
+
+<p>One of the first benefits I noticed is that iOS and Android simulators can be run from the terminal, and update with new changes instantly. This means that any device-specific issues should show right away, which should reduce the need for unnecessary builds and require less reliance on the browser which can render things differently.</p>
+
+<h3>Steeper learning curve</h3>
+
+<p>The second thing I noticed was the learning curve. Coming from an Angular 2 background, I was surprised at how different React Native is. Aside from the expected differences when using React instead of Angular, React Native also uses JSX in place of HTML – and has a few different rules for CSS, too. The toolbox you are given is very sparse compared to Ionic, prompting you to build things up from scratch, or select suitable components online, instead of using a built-in library.</p> 
+
+<h3>Help via documentation</h3>
+
+<p>Despite the learning curve, I was able to find plenty of good, free documentation online. I had no issue building an application from this – whether accessing native device features, creating dynamic templates or doing a range of things in between. The learning curve is definitely manageable and simply requires an initial time investment. At this point, the appeal of React Native’s improved performance made the short, accessible learning curve seem very worthwhile.</p>
+ 
+<h3>Not so fast</h3>
+
+<p>I also began to notice that development time feels lengthier overall, which is to be expected without built-in components. There are a variety of good quality components available online however, and you can of course build up your own for use in future projects. Again, this points to an initial time investment, in order to become familiar with the best component options online, and to learn how best to build up your own collection of these. There is also the option of simply building from scratch when more suitable, and not using anything pre-built.</p>
+
+<p>Despite React Native’s approach likely requiring more thought and time, it does come with several benefits. It prompts the developer to consider their best option and customise an application in a deeper, more tailored way, instead of automatically reaching for built-in components.</p>
+
+<h3>Platform publishing flexibilities and challenges</h3>
+
+<p>Another key difference is that React Native does not fully encompass the Ionic 2 philosophy of “write once, run anywhere.” In fact, there will be some differences in the code for compiling to Android vs iOS. This adds to development time, but is a deliberate way to encourage developers to write code more suited to the native platform. This can give applications a more native feel, and prompts you to write the code best suited to each device, in scenarios where quality could be compromised on one device but work fine on another. This is something that would occasionally happen with Ionic 2, and I think having the option to write different code for different devices so obvious and built-in to React Native is a smart move. However, this further increases development time and is ultimately less simple, so could devalue React Native over Ionic 2 when time is a more important constraint.</p>
+ 
+<h2>Horses for courses</h2>
+
+<p>Overall, Ionic 2 is a great option for reducing development time and simplifying the mobile development process, but in terms of performance, customisation and quality: React Native comes out on top. Ultimately, it depends on the project – will the increased time and skill investment for React Native be worthwhile, or will the improved performance yielded perhaps not make enough of a noticeable difference in your final product?</p> 
+
+<p>Personally, I concluded that Ionic is the simpler, better option for applications you wish to produce quickly and which don’t have a high demand on performance. However, I would definitely consider React Native the better option when very high-level performance is a must. Perhaps React Native is also better in situations where we have more development time, since it inherently encourages better customisation and better quality which can lead to an improved final product.</p>
+    </div>
+
+    <p>Tagged with:<br /> <a href="/journal/archive/tag/reactnative" rel="tag">reactnative</a>, <a href="/journal/archive/tag/ionic" rel="tag">ionic</a>, <a href="/journal/archive/tag/mobile" rel="tag">mobile</a></p>
+
+</article>
+
+
+
+
+</main>
+
+<div id="contact-prompt">
+<div id="contact-prompt-inner">
+
+<figure>
+    <img src="/console/resources/liamcentred-2-w400.jpg" alt="A photo of Liam Nugent, CEO" />
+    <figcaption>Talk to Liam</figcaption>
+</figure>
+
+<div id="contact-prompt-body">
+    <h2>Let’s talk</h2>
+    <p>Looking for a brand new app or website? Or want to improve your existing system?</p>
+    <p>Let’s talk about it. Contact Liam on <a class="tel" href="tel:+441413327051">+44 (0)141 332 7051</a> or <a href="mailto:info@greenhilldigital.com">info@greenhilldigital.com</a> for a no-obligation chat and we'll take it from there.</p>
+</div>
+
+</div> <!-- / #contact-prompt-inner -->
+</div> <!-- / #contact-prompt -->
+
+<footer role="contentinfo">
+
+<!-- <ul id="footer-internal-links">
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="/careers/">Careers</a></li>
+</ul> -->
+
+<small class="legal copyright-notice">&copy; 2014 - 2022 Greenhill</small>
+<small class="legal">Registered in Scotland</small>
+<small class="legal">Company Number SC475563</small>
+
+<!-- <h3>Find us on:</h3> -->
+<ul id="social-links">
+    <li id="social-link-linkedin"><a href="https://www.linkedin.com/company/10542569/" rel="me">LinkedIn</a></li>
+    <li id="social-link-instagram"><a href="https://www.instagram.com/greenhill01/" rel="me">Instagram</a></li>
+    <li id="social-link-medium"><a href="https://medium.com/@greenhill01" rel="me">Medium</a></li>
+</ul>
+
+</footer>
+
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/main_v4.js"></script>
+
+<script>
+if (navigator.serviceWorker) {
+	navigator.serviceWorker.register('/serviceworker.js');
+    window.addEventListener('load', function() {
+        if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({'command': 'clean up caches'});
+        }
+    });
+}
+</script>
+
+
+
+<script>
+    UA.then(function(sdk) {
+        console.log('UA success');
+
+        // First check if user is already opted in, in which case stop here.
+        if (sdk.channel && sdk.channel.optedIn) {
+            console.log('Already opted in to web push notifications');
+        } else {
+            console.log('Not yet opted in to web push notifications');
+        
+            var elMain = document.querySelector("main");
+
+            var divPushNotificationsPrompt = document.createElement("div");
+            divPushNotificationsPrompt.setAttribute("id", "push-notifications-prompt");
+
+            var pnpHeading = document.createElement("h3");
+            pnpHeading.innerHTML = "Hear about new articles first";
+
+            var pnpIntro = document.createElement("p");
+            pnpIntro.innerHTML = "We use <em>web push notifications</em> to let our subscribers know when we’ve published a new journal entry. Give it a try!";
+
+            var btnWebPushRegister = document.createElement("button");
+            btnWebPushRegister.setAttribute("id", "register");
+            btnWebPushRegister.innerHTML = "Notify me of new articles";
+            
+            divPushNotificationsPrompt.appendChild(pnpHeading);
+            divPushNotificationsPrompt.appendChild(pnpIntro);
+            divPushNotificationsPrompt.appendChild(btnWebPushRegister);
+            elMain.appendChild(divPushNotificationsPrompt);
+
+            document.getElementById('register').addEventListener('click', function() {
+                sdk.register().then(function(response) {
+                    console.log(response);
+
+                    var thanks = document.createElement("p");
+                    thanks.innerHTML = "<b>Thanks</b> – you’re now subscribed.";
+                    divPushNotificationsPrompt.removeChild(btnWebPushRegister);
+                    divPushNotificationsPrompt.appendChild(thanks);
+
+                }).catch(function(error) {
+                    console.log(error);
+                });
+            });
+        }
+    }).catch(function(err) {
+        console.log('UA fail');
+        console.log(err)
+    })
+</script>
+
+</body>
+</html>
