@@ -1,0 +1,16 @@
+/* TEAM */
+
+Creator: Greenhill
+
+/* THANKS */
+
+Typography Inspiration: "Web Typography", a book by Richard Rutter 
+Twitter: @webtypography
+
+Responsive Images Inspiration: https://cloudfour.com/thinks/responsive-images-101-definitions/
+Twitter: https://twitter.com/grigs
+
+# TECHNOLOGY COLOPHON
+
+Standards: HTML5, CSS3, Javascript
+Components: Perch (CMS), PHP, MySQL

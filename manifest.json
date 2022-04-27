@@ -1,0 +1,47 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Greenhill",
+    "scope": "/manifest.json",
+    "display": "standalone",
+    "start_url": "/",
+    "short_name": "Greenhill",
+    "theme_color": "#ffffff",
+    "description": "We create digital experiences that people love to use",
+    "orientation": "any",
+    "background_color": "#ffffff",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "sizes": "70x70",
+            "src": "/images/tile.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "180x180",
+            "src": "/icon-180x180.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "150x150",
+            "src": "/images/tile.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "310x310",
+            "src": "/images/tile.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "310x150",
+            "src": "/images/tile-wide.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "512x512",
+            "src": "/img/android-icon-512x512-1.png",
+            "type": "image/png"
+        }
+    ]
+}
