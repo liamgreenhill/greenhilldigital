@@ -1,0 +1,30 @@
+# www.robotstxt.org/
+
+# Disallow crawling of certain content
+User-agent: *
+Disallow: /console
+Disallow: /fonts
+Disallow: /inc
+Disallow: /service
+Disallow: /testcontent
+Disallow: /offline_v3.html
+Disallow: /offline_v4.html
+
+# Allow social media sites and other crawlers access to /console/resources. 
+User-agent: Twitterbot
+Allow: /console/resources
+
+User-agent: facebookexternalhit
+Allow: /console/resources
+
+User-agent: Googlebot
+Allow: /console/resources
+
+User-agent: Googlebot-image
+Allow: /console/resources
+
+User-agent: BingBot
+Allow: /console/resources
+
+User-agent: DuckDuckBot
+Allow: /console/resources
