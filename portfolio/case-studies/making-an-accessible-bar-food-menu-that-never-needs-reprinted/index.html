@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Greenhill FLD Limited">
+
+<meta name="robots" content="index, follow">
+
+<title>Making an accessible bar food menu that never needs reprinted | Case Study | Greenhill</title>
+<meta name="description" content="How do you create a restaurant menu that is always up-to-date and lets customers order their own food and drink?">
+<link rel="canonical" href="https://www.greenhilldigital.com/portfolio/case-studies/making-an-accessible-bar-food-menu-that-never-needs-reprinted" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_gb" />
+<meta property="og:url" content="https://www.greenhilldigital.com/portfolio/case-studies/making-an-accessible-bar-food-menu-that-never-needs-reprinted" />
+<meta property="og:title" content="Making an accessible bar food menu that never needs reprinted | Case Study | Greenhill" />
+<meta property="og:description" content="How do you create a restaurant menu that is always up-to-date and lets customers order their own food and drink?" />
+<meta property="og:image" content="https://www.greenhilldigital.com/logo-400x400.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="400" />
+<meta property="og:site_name" content="Greenhill" />
+
+<link href="https://www.greenhilldigital.com/journal/rss" rel="alternate" type="application/rss+xml" title="Greenhill Journal RSS feed">
+<link href="https://www.greenhilldigital.com/journal/jsonfeed.json" rel="alternate" type="application/json" title="Greenhill Journal JSON feed">
+
+<!-- <link rel="manifest" href="site.webmanifest"> -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- PWA Splash images for iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+
+
+<script type="text/javascript">
+    var MTUserId='1b677d22-39fd-44f6-8625-1806c06a6550';
+    var MTFontIds = new Array();
+
+    MTFontIds.push("1475508"); // Avenir® W01 45 Book
+    MTFontIds.push("1475514"); // Avenir® W01 45 Book Oblique
+    MTFontIds.push("1475532"); // Avenir® W01 65 Medium
+    MTFontIds.push("1475538"); // Avenir® W01 65 Medium Oblique
+    MTFontIds.push("1475556"); // Avenir® W01 95 Black
+    MTFontIds.push("1475562"); // Avenir® W01 95 Black Oblique
+    (function() {
+        var mtTracking = document.createElement('script');
+        mtTracking.type='text/javascript';
+        mtTracking.async='true';
+        mtTracking.src='/js/mtiFontTrackingCode.js';
+
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(mtTracking);
+    })();
+</script>
+
+<link rel="serviceworker" href="/serviceworker.js">
+
+<link rel="stylesheet" href="/css/screen_v5.css">
+
+<meta name="theme-color" content="#ffffff">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-17084064-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-17084064-1');
+</script>
+
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<header role="banner">
+
+    <div id="header-global">
+
+        <div id="logo">
+        <a href="https://www.greenhilldigital.com" title="Home"><span>Greenhill</span></a>
+        </div>
+
+        <ul id="header-contact-methods">
+        <li><a id="header-tel" href="tel:+441413327051">Call +44 (0)141 332 7051</a></li>
+        <li><a id="header-contact-us" href="mailto:info@greenhilldigital.com">Message us</a></li>
+        <li><a id="header-visit-us" href="https://goo.gl/maps/beb15WjNWJP2">Visit us</a></li>
+        </ul>
+
+        <nav aria-label="site">
+        <ul id="global-navigation">
+        <li id="nav-services"><a href="/services/" title="What we do">Services</a></li>
+        <li id="nav-portfolio" class="active"><a href="/portfolio/" title="A selection of our work">Portfolio</a></li>
+        <li id="nav-about"><a href="/about/" title="Find out more about us">About</a></li>
+        <li id="nav-journal"><a href="/journal/" title="Our latest opinion, thoughts and discoveries">Journal</a></li>
+        <li id="nav-contact"><a href="/contact/" title="Contact us">Contact</a></li>
+        </ul>
+        </nav>
+
+    </div>
+
+    
+</header>
+
+<main>
+
+<article>
+
+<h1>Making an accessible bar food menu that never needs reprinted</h1>
+
+<p class="standfirst">How do you create a restaurant menu that is always up-to-date and lets customers order their own food and drink?
+Here’s how we created an iPad menu system that increased bar sales, reduced mistakes and wastage, and kept staff costs down.</p>
+
+<figure>
+    
+    <img 
+    srcset="/console/resources/article-main-image-1-w320.jpg 320w,
+            /console/resources/article-main-image-1-w480.jpg 480w, 
+            /console/resources/article-main-image-1-w640.jpg 640w, 
+            /console/resources/article-main-image-1-w752.jpg 752w, 
+            /console/resources/article-main-image-1-w960.jpg 960w, 
+            /console/resources/article-main-image-1-w1400.jpg 1400w"
+    sizes="(max-width: 59.99em) 90vw, 
+           (max-width: 79.99em) 75vw, 
+           (max-width: 105em) 50vw,
+           960px" 
+    src="/console/resources/article-main-image-1-w960.jpg" alt="Screenshot of the menu software">
+    <figcaption>The menu at Max's Bar</figcaption>
+    
+</figure>
+
+<div class="article-body">
+    <p>When we were approached by the owner of one of our favourite bars in town and asked if we could "give him an app" we immediately put our drinks down and got talking.</p>
+
+<p>The frustration he felt most keenly was having to continuously reprint menus every time he wanted to change the price of an item by a few pennies. But as we started discussing how to do it we could start to see many more benefits. We could make the menu accessible by virtue of the fact that users could control text size with a pinch-and-zoom on an iPad screen for people with impaired vision. We could use photographs to showcase the food which would also make it easier to understand for non-English speakers. We could make it update in real-time so that the items on offer were always accurate and customers could place orders directly from their tables. The list goes on and it ends with the most exciting factor - it would just be a neat thing to do. We wanted to be able to go to that bar and order drinks from an iPad at our table ourselves!</p>
+
+<p>Like many projects, the finished product ended up quite a distance from the original idea. In the end, we produced a menu system that customers have used to place tens of thousands of orders.</p>
+
+<figure class="gh-figure">
+	<img title="Busy bar" src="/console/resources/busy-bar.jpeg" alt="Busy bar"> 
+	<figcaption>People waiting to buy a drink at Max's Bar</figcaption>
+</figure>
+
+<h2>Research and strategy</h2>
+
+<p>The original idea that we were asked to consider was to put together a simple menu that customers could browse themselves with iPads housed on the tables. </p>
+
+<p>Our first decision was to choose whether to build a native app or a website. Factors in that decision included whether or not the system had to be available offline (it did) and if the menu needed to access any other native device functions (it didn't). So, relying on the capability of the app cache to store a simple version of the menu when the device is offline, we opted to build a website: a sort of precursor to <a href="/services">Progressive Web Apps</a> (PWAs). Websites are open to all devices so, although the client wanted to use iPads, there was no requirement to do that. We would make it future-friendly by using some basic responsive design techniques. That meant he could switch to other, more affordable, tablets in the future without any requiring a significant re-work. Going with a website also removed the need to release anything via the App Store so ongoing deployment effort and costs are reduced.</p>
+
+<p>We thought about using existing e-commerce software and we went as far as building a prototype with one system but once we started adding the real menu items it became apparent that it wasn't up to the job. For example, in order to let customers order pizzas with their own topping combinations, we had a situation where staff would have to add thousands of potential products to the admin console. That wasn't going to scale. So we proposed building our own.</p>
+
+<figure class="gh-figure gh-figure-alt">
+	<img title="Bottles" src="/console/resources/bottles.jpeg" alt="Bottles"> 
+	<figcaption>A selection of the drinks on offer</figcaption>
+</figure>
+
+<h2>Design and front-end development</h2>
+
+<p>We provided art direction, UX design, and front-end development. </p>
+
+<p>Understanding how to use a restaurant menu is not a problem that we needed to fix for the people using this system. In fact, the real challenge was to make sure we didn't make things worse. We needed to make sure that people understood how to use the iPad equivalent with as little guidance as possible.</p>
+
+<p>For the main menu screen, we used a 3 column layout with the category list pinned to the left of the screen to help people scroll directly to the section they are interested in. The main menu item list was positioned in the centre column and the right column was available for advertising space. Tapping a menu item would take you to a full-screen photographic product details page with the option to add it to a cart</p> 
+
+<p>We spent some time trying different typography approaches to find something that would make it easy to scan menu items quickly but also allowed for a slower and more comfortable read for item descriptions. We settled on using the sans-serif font <a href="https://typekit.com/fonts/aaux-next">Aaux Next</a> for functional text on menu item names, form elements and buttons. We paired that with an italicised <a href="https://typekit.com/fonts/adobe-caslon">Adobe Caslon</a> for more descriptive text. And just to spice things up a bit we used a blocky <a href="https://typekit.com/fonts/franklin-gothic-urw">Franklin Gothic URW</a> for big, bold section headings.</p>
+
+<p>One of the nice touches we added was a subtle but satisfying parallax effect on the full-screen product photographs.</p>
+
+<figure class="gh-figure-highlight">
+	<img title="Maxs Menu inline image 1" src="https://www.greenhilldigital.com/console/resources/menu-screenshot-on-green-background.jpg" alt="Maxs Menu inline image 1">
+    <figcaption>A product page on the Max's Bar menu</figcaption>
+</figure>
+
+
+<h2>Application development</h2>
+<figure class="gh-figure">
+	<img title="Bar server at till" src="/console/resources/server-at-till.jpeg" alt="Bar server at till"> 
+	<figcaption>A bar server at the cash register</figcaption>
+</figure>
+<p>We recognised that the underlying structure of this system was closely aligned to an e-commerce store but not exactly the same. In our case, we decided that we wanted to allow people to build and place orders via their iPad but we didn't want to process any payments. The job of our system was to replace the paper menu in the customer's hand and the paper notepad in the server's hand. Once the customer placed an order, the server would still enter the food orders into the pre-existing EPOS system that reconciled payments and sent orders to the kitchen. We'd make that easy for them by providing an order interface on an iPad placed beside their EPOS system. We all agreed that we didn't want to remove the server from the ordering process and allow customers a direct line to place orders with the kitchen. We wanted the customer order to be a prompt for the server to check-in on the customer and make sure they were happy.</p>
+
+<p>Our first port-of-call was to try using off-the-shelf e-commerce software. We got as far as building a prototype and testing it in the restaurant but found it too limiting so we decided to build our own.</p>
+
+<p>Anticipating hundreds of orders in a day, we built an enterprise-level web database application using <a href="https://cakephp.org/">CakePHP</a>. It supports a customer-facing menu website and a staff-facing console website where bar staff can manage the menu items and process orders.</p>
+
+
+<h2>Usability testing</h2>
+<figure class="gh-figure gh-figure-alt">
+	<img title="Cocktail maker" src="/console/resources/cocktail-maker.jpeg" alt="Cocktail mixing in progress"> 
+	<figcaption>Cocktail mixing in progress</figcaption>
+</figure>
+<p>The test script wrote itself: go to a good bar and order some food and drink. Seemed easy enough!  In reality, spending time in the bar with the staff was invaluable. We ironed out issues with making it easy to add products and made changes to the process to fit with how they <em>really</em> processed orders - not how we thought they should.</p>
+
+<h2>Staff training</h2>
+<p>Another real-world challenge of running a bar or restaurant is that staff will come and go over a period of time. We wanted to make sure that the institutional knowledge of how to use the system didn't leave with any particular member of staff. We created a series of training videos and embedded them in the admin console so that ongoing staff training was simple, reliable and consistent.</p>
+
+
+<h2>Results:</h2>
+
+<p>The menu system has racked up tens of thousands of orders. Customers, staff and the bar owner are happy with the new menu.</p>
+
+<p>Here's a taster of what they like about it:</p>
+
+<h3>Customers</h3>
+
+<ul>
+	<li>It’s more exciting to use than a paper menu.</li> 
+	<li>People who need to view larger print text or images can do so just by using the native iOS pinch-to-zoom gesture.</li>
+	<li>The Specials on offer are always up-to-date.</li>
+	<li>Customers are more confident placing orders for items they potentially didn’t know or understand because they can look at a picture of the item first.</li>
+</ul>
+
+<h3>Bar staff</h3>
+<ul>
+	<li>Having to say  “Sorry, we’ve run out of that” <em>after</em> the customer places an order is a thing of the past.</li>
+	<li>The business can update prices without reprinting the entire menu.</li>
+	<li>Fewer servers are required to cover tables. The staff who are there can concentrate on making sure the customers are happy rather than dealing with admin.</li>
+	<li>Contextual adverts and 'pairing suggestions' allow the bar to up-sell and cross-sell and increase overall sales.</li>
+	<li>There are advertising opportunities on the menu that the business can leverage in partnerships with suppliers and other third parties.</li>
+	<li>Having an unobtrusive space for high-quality branded product photography is a valuable channel for drinks brands to increase brand and product recognition.</li>
+	<li>Sales have increased as customers can easily add optional extras and increase their average spend without having to catch the attention of a server.</li>
+</ul>
+
+<p>And having done all that (thirsty) work, we can confirm that ordering some drinks via the iPad menu is pretty slick and very easy. Some might say <em>too</em> easy.</p> <!-- textile="true" -->
+</div>
+
+
+
+
+
+<!-- Homepage hero image (narrow width viewports) -->
+<!-- Need these? density="2" quality="20" suppress="true" sharpen="2" -->
+
+
+
+
+
+
+
+<!-- Homepage hero image (medium width viewports) -->
+
+
+
+
+
+
+<!-- Homepage hero image (wide viewports) -->
+
+
+
+
+
+
+</article>
+
+<aside class="teaser">
+
+	<header>
+	    <h2 class="teaser-heading">More from our Portfolio</h2>
+	</header>
+    
+<ul class="teaser-list">
+
+<li>
+    <a class="wrapping-anchor teaser-group" href="/portfolio/case-studies/rubadub-app">
+		
+		<img 
+	    srcset="/console/resources/article-main-image-40-percent-w320.jpg 320w,
+	            /console/resources/article-main-image-40-percent-w480.jpg 480w, 
+	            /console/resources/article-main-image-40-percent-w640.jpg 640w, 
+	            /console/resources/article-main-image-40-percent-w752.jpg 752w, 
+	            /console/resources/article-main-image-40-percent-w960.jpg 960w, 
+	            /console/resources/article-main-image-40-percent-w1400.jpg 1400w"
+        sizes="(max-width: 59.99em) 90vw, 
+                (max-width: 105em) 17.5em,
+                960px" 
+	    src="/console/resources/article-main-image-40-percent.jpg" alt="The Rubadub App open on an iPhone with some ear buds" />
+		
+        <div class="teaser-text">
+        	<h3 class="teaser-item-heading">Rubadub App</h3>
+        	<p>Redefining record shopping for 2018: personalised recommendations direct to your phone, immersive media and checkout made simple.</p>
+        </div>
+    </a>
+</li>
+
+</ul>
+
+
+</aside>
+
+</main>
+
+<div id="contact-prompt">
+<div id="contact-prompt-inner">
+
+<figure>
+    <img src="/console/resources/liamcentred-2-w400.jpg" alt="A photo of Liam Nugent, CEO" />
+    <figcaption>Talk to Liam</figcaption>
+</figure>
+
+<div id="contact-prompt-body">
+    <h2>Let’s talk</h2>
+    <p>Looking for a brand new app or website? Or want to improve your existing system?</p>
+    <p>Let’s talk about it. Contact Liam on <a class="tel" href="tel:+441413327051">+44 (0)141 332 7051</a> or <a href="mailto:info@greenhilldigital.com">info@greenhilldigital.com</a> for a no-obligation chat and we'll take it from there.</p>
+</div>
+
+</div> <!-- / #contact-prompt-inner -->
+</div> <!-- / #contact-prompt -->
+
+<footer role="contentinfo">
+
+<!-- <ul id="footer-internal-links">
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="/careers/">Careers</a></li>
+</ul> -->
+
+<small class="legal copyright-notice">&copy; 2014 - 2022 Greenhill</small>
+<small class="legal">Registered in Scotland</small>
+<small class="legal">Company Number SC475563</small>
+
+<!-- <h3>Find us on:</h3> -->
+<ul id="social-links">
+    <li id="social-link-linkedin"><a href="https://www.linkedin.com/company/10542569/" rel="me">LinkedIn</a></li>
+    <li id="social-link-instagram"><a href="https://www.instagram.com/greenhill01/" rel="me">Instagram</a></li>
+    <li id="social-link-medium"><a href="https://medium.com/@greenhill01" rel="me">Medium</a></li>
+</ul>
+
+</footer>
+
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/main_v4.js"></script>
+
+<script>
+if (navigator.serviceWorker) {
+	navigator.serviceWorker.register('/serviceworker.js');
+    window.addEventListener('load', function() {
+        if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({'command': 'clean up caches'});
+        }
+    });
+}
+</script>
+
+
+
+</body>
+</html>
