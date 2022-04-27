@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Greenhill FLD Limited">
+
+<meta name="robots" content="index, follow">
+
+<title>An Event Apart: Everything You Know About Web Design Just Changed | Greenhill</title>
+<meta name="description" content="&lt;p&gt;My notes from Jen Simmons’s talk at An Event Apart Chicago 2018, in which she suggests we are in the era of Intrinsic Web Design.&lt;/p&gt;">
+
+<meta property="og:site_name" content="Greenhill Journal" />
+<meta property="og:url" content="https://www.greenhilldigital.com/journal/an-event-apart-everything-you-know-about-web-design-just-changed" />
+<meta property="og:title" content="Jen Simmons: Everything You Know About Web Design Just Changed" />
+<meta property="og:description" content="At An Event Apart Chicago 2018, Jen Simmons discussed the historic tension between i) the need for proper graphic design on the web; and ii) the medium’s limited toolset and inherent unpredictability. She went on to suggest that we are now in a new era of “Intrinsic Web Design” in which the two can co-exist in harmony. Here are my notes and to-dos." /><meta property="og:type" content="article" />
+<meta property="article:author" content="" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:title" content="Jen Simmons: Everything You Know About Web Design Just Changed" />
+<meta name="twitter:description" content="At An Event Apart Chicago 2018, Jen Simmons discussed the historic tension between i) the need for proper graphic design on the web; and ii) the medium’s limited toolset and inherent unpredictability. She went on to suggest that we are now in a new era of “Intrinsic Web Design” in which the two can co-exist in harmony. Here are my notes and to-dos." /><meta name="twitter:url" content="https://www.greenhilldigital.com/journal/an-event-apart-everything-you-know-about-web-design-just-changed" /><link href="/console/addons/apps/perch_blog/endpoint/?pid=19" rel="webmention">
+<link rel='canonical' href="https://www.greenhilldigital.com/journal/an-event-apart-everything-you-know-about-web-design-just-changed">
+
+<link href="https://www.greenhilldigital.com/journal/rss" rel="alternate" type="application/rss+xml" title="Greenhill Journal RSS feed">
+<link href="https://www.greenhilldigital.com/journal/jsonfeed.json" rel="alternate" type="application/json" title="Greenhill Journal JSON feed">
+
+<!-- <link rel="manifest" href="site.webmanifest"> -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- PWA Splash images for iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/img/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+
+
+<script type="text/javascript">
+    var MTUserId='1b677d22-39fd-44f6-8625-1806c06a6550';
+    var MTFontIds = new Array();
+
+    MTFontIds.push("1475508"); // Avenir® W01 45 Book
+    MTFontIds.push("1475514"); // Avenir® W01 45 Book Oblique
+    MTFontIds.push("1475532"); // Avenir® W01 65 Medium
+    MTFontIds.push("1475538"); // Avenir® W01 65 Medium Oblique
+    MTFontIds.push("1475556"); // Avenir® W01 95 Black
+    MTFontIds.push("1475562"); // Avenir® W01 95 Black Oblique
+    (function() {
+        var mtTracking = document.createElement('script');
+        mtTracking.type='text/javascript';
+        mtTracking.async='true';
+        mtTracking.src='/js/mtiFontTrackingCode.js';
+
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(mtTracking);
+    })();
+</script>
+
+<link rel="serviceworker" href="/serviceworker.js">
+
+<link rel="stylesheet" href="/css/screen_v5.css">
+
+<meta name="theme-color" content="#ffffff">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-17084064-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-17084064-1');
+</script>
+
+</head>
+<body class="section-journal">
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<header role="banner">
+
+    <div id="header-global">
+
+        <div id="logo">
+        <a href="https://www.greenhilldigital.com" title="Home"><span>Greenhill</span></a>
+        </div>
+
+        <ul id="header-contact-methods">
+        <li><a id="header-tel" href="tel:+441413327051">Call +44 (0)141 332 7051</a></li>
+        <li><a id="header-contact-us" href="mailto:info@greenhilldigital.com">Message us</a></li>
+        <li><a id="header-visit-us" href="https://goo.gl/maps/beb15WjNWJP2">Visit us</a></li>
+        </ul>
+
+        <nav aria-label="site">
+        <ul id="global-navigation">
+        <li id="nav-services"><a href="/services/" title="What we do">Services</a></li>
+        <li id="nav-portfolio"><a href="/portfolio/" title="A selection of our work">Portfolio</a></li>
+        <li id="nav-about"><a href="/about/" title="Find out more about us">About</a></li>
+        <li id="nav-journal" class="active"><a href="/journal/" title="Our latest opinion, thoughts and discoveries">Journal</a></li>
+        <li id="nav-contact"><a href="/contact/" title="Contact us">Contact</a></li>
+        </ul>
+        </nav>
+
+    </div>
+
+    
+</header>
+
+<main id="journal-entry-main">
+
+<!-- <button id="notifications">Send dummy notifications</button> -->
+
+<article class="h-entry">
+
+    
+        <!-- <a href="archive.php?cat=thinking" class="p-category"> -->
+            
+        <!-- </a> -->
+    
+
+    <!-- <a href="/journal/an-event-apart-everything-you-know-about-web-design-just-changed" rel="bookmark">bookmark icon</a> -->
+    <h1 class="p-name">An Event Apart: Everything You Know About Web Design Just Changed</h1>
+    <p class="byline">
+        <span class="author-and-date">by <span class="p-author h-card">Laurence Hughes</span> <time class="dt-published" datetime="2018-10-01 15:25:00">01 October 2018</time></span> 
+    </p>
+    
+    <p class="standfirst">At An Event Apart Chicago 2018, <a href="http://jensimmons.com/">Jen Simmons</a> discussed the historic tension between i) the need for proper graphic design on the web; and ii) the medium’s limited toolset and inherent unpredictability. She went on to suggest that we are now in a new era of “Intrinsic Web Design” in which the two can co-exist in harmony. Here are my notes and to-dos.</p>
+
+    
+    <div class="article-body description e-content">
+        <h2>Where we’ve been</h2>
+<p>Jen recapped the previous eras of web design/layout: Basic HTML with flow layout, CSS, tables for layout, Flash, absolute positioning, fluid columns, floats, fixed-width layouts, then Responsive Web Design.</p>
+
+<h2>Enter <em>Intrinsic Web Design</em></h2>
+<p>Jen coined the phrase Intrinsic Design to describe the whole system of layout including new and old techniques, and how all these pieces fit together in a brand new way.</p>
+<p>Here are some distinguishing features (PS thanks to <a href="https://adactio.com/journal/13671">Adactio’s notes</a> for help with the definition):</p>
+<ul>
+	<li>RWD has flexible images. Intrinsic web design has flexible images <em>or</em> fixed images.</li>
+	<li>Intrinsic design has nested formatting contexts (e.g. flex within grid).</li>
+	<li>RWD has fluid columns. Intrinsic web design has fluid columns and rows (it's two-dimensional).</li>
+         <li>RWD uses media queries. Intrinsic web design doesn’t necessarily need them. For example we can combine different length units (e.g. <code>minmax()</code> with <code>auto</code>) in grid layouts to set <em>stages of squishiness</em>.</li>
+</ul>
+
+<p>Here’s <a href="https://codepen.io/jensimmons/pen/RMMdXb?editors=1100">a common layout implemented using various intrinsic design techniques</a>.</p>
+
+<h2>Techniques</h2>
+
+<p>When considering layout for different parts of a page we can now use combinations of: CSS Grid, Flexbox, Flow (just letting inline and block elements do their normal thing), and Multi Column.</p>
+
+<p>CSS Grid allows us to do Responsive Web Design <em>better</em>.</p>
+
+<p>In the era of Intrinsic Web Design we don’t just tell things how to look; we can <em>program a flexibility model</em>.</p>
+<h3>Methods for contracting and expanding</h3>
+<ul>
+		 	 	 <li>Wrap and reflow (not just simple HTML text elements – Jen’s example was a row of media objects laid out using responsive Grid)</li>
+	  	  	  	 <li>Enlarge/shrink (especially using viewport units; for example you could style <code>body</code> such that its margin and font-size are set in <code>vw</code>)</li>
+		  	  	 <li>Add or remove <em>real</em> whitespace (e.g. by  <a href="https://labs.jensimmons.com/2017/01-003.html">explicit placement of items on a grid</a> or <a href="https://labs.jensimmons.com/2018/01-018.html">vertical and horizontal centring using flex</a>)</li>
+		 	 	 <li>Slide and overlap (<a href="https://labs.jensimmons.com/2018/01-019.html">grid items can be positioned so as to overlap</a>)</li>
+</ul>
+
+<h3>New possibilities for flexibility</h3>
+<ul>
+		 	 <li><strong>Images</strong>: fixed-size; fluid horizontally; fluid vertically; set width & height + Object Fit (e.g. width: 100%, height: 50vw, object-fit: cover;). <a href="https://www.youtube.com/watch?v=5CZyxnCdXuk">Object Fit works by auto-cropping an image to fit the available space</a>. <a href="https://codepen.io/jensimmons/live/bvMVeX">A photo of a person</a> can be a good use case.</li>
+		 	 <li><strong>Columns and Rows</strong>. Lengths (widths or heights) can be fixed, %, FR units (fraction of available space), minmax(), or a keyword such as auto, min-content, or max-content. 
+		 	 	 <ul>
+		 	 	 	 <li>Here’s an example of <a href="https://codepen.io/jensimmons/live/dmeMpO">various flexibility settings combined in a row</a> (also illustrating what Jen called the “stages of squish”!).</li>
+		 	 	 	 <li>Here’s an interesting <a href="https://codepen.io/jensimmons/pen/gezmMa?editors=1100">grid layout with large image and overlapping, offset caption</a>.</li>
+		 	 	 </ul>
+		 	 </li>
+</ul>
+<h3>Changes in how we use the viewport</h3>
+<ul>
+		 	 <li>we can now consider the bottom edge of the viewport</li>
+		 	 <li>we can now program to all four edges of the viewport</li>
+		 	 <li>Some techniques available: vertical centring, vertical viewport units, rows</li>
+</ul>
+
+<h2>Nested contexts</h2>
+<p>Jen regularly chooses to use <strong>grid at the layout level</strong> and <strong>flex at the component level</strong>. (This reminded me of <a href="https://www.greenhilldigital.com/journal/an-event-apart-fit-for-purpose-making-sense-of-the-new-css">Eric Meyer’s advice to set rules for which layout tool to use when</a>).</p>
+
+<p>Here’s another example illustrating <a href="https://codepen.io/jensimmons/pen/KoRWMv?editors=1100">flex for component layout nested within a grid layout for the container</a>. (NB this also quite nicely accommodates both long and tall images)</p>
+
+
+<h2>My next actions</h2>
+<ul>
+	<li>Watch Jen’s <a href="https://www.youtube.com/layoutland">layoutland videos</a> which explain many of the layout techniques she showed in her slides (the <a href="https://www.youtube.com/playlist?list=PLbSquHt1VCf2irEuVf8c2hsoOMKyeQ2LO">Jan Tschichold -style poster layout</a> with angled text was particularly nice).</li>
+	<li>Try out Jen’s <a href="https://labs.jensimmons.com/2017/workshop/">CSS Grid Training Exercises</a>.</li>
+	<li>Check <a href="https://labs.jensimmons.com/">Jen’s Labs</a>.</li>
+	<li>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/order"><code>order</code> CSS property</a> within Flex and Grid components for sequencing an element in the best way in the HTML structure but making it <em>appear</em> in a different sequence. Good for, for example, positioning the image element of a media object.</li>
+	<li>Remember to use Firefox Nightly, especially when working with Grid. It has great Grid Inspector Tools.</li>
+</ul>
+    </div>
+
+    <p>Tagged with:<br /> <a href="/journal/archive/tag/css" rel="tag">CSS</a>, <a href="/journal/archive/tag/html" rel="tag">HTML</a>, <a href="/journal/archive/tag/grid" rel="tag">grid</a>, <a href="/journal/archive/tag/html5" rel="tag">html5</a>, <a href="/journal/archive/tag/flex" rel="tag">flex</a>, <a href="/journal/archive/tag/cssgrid" rel="tag">cssgrid</a>, <a href="/journal/archive/tag/order" rel="tag">order</a>, <a href="/journal/archive/tag/min-content" rel="tag">min-content</a>, <a href="/journal/archive/tag/max-content" rel="tag">max-content</a>, <a href="/journal/archive/tag/minmax" rel="tag">minmax</a>, <a href="/journal/archive/tag/object-fit" rel="tag">object-fit</a>, <a href="/journal/archive/tag/intrinsic" rel="tag">intrinsic</a>, <a href="/journal/archive/tag/intrinsicwebdesign" rel="tag">intrinsicwebdesign</a></p>
+
+</article>
+
+
+
+
+</main>
+
+<div id="contact-prompt">
+<div id="contact-prompt-inner">
+
+<figure>
+    <img src="/console/resources/liamcentred-2-w400.jpg" alt="A photo of Liam Nugent, CEO" />
+    <figcaption>Talk to Liam</figcaption>
+</figure>
+
+<div id="contact-prompt-body">
+    <h2>Let’s talk</h2>
+    <p>Looking for a brand new app or website? Or want to improve your existing system?</p>
+    <p>Let’s talk about it. Contact Liam on <a class="tel" href="tel:+441413327051">+44 (0)141 332 7051</a> or <a href="mailto:info@greenhilldigital.com">info@greenhilldigital.com</a> for a no-obligation chat and we'll take it from there.</p>
+</div>
+
+</div> <!-- / #contact-prompt-inner -->
+</div> <!-- / #contact-prompt -->
+
+<footer role="contentinfo">
+
+<!-- <ul id="footer-internal-links">
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="/careers/">Careers</a></li>
+</ul> -->
+
+<small class="legal copyright-notice">&copy; 2014 - 2022 Greenhill</small>
+<small class="legal">Registered in Scotland</small>
+<small class="legal">Company Number SC475563</small>
+
+<!-- <h3>Find us on:</h3> -->
+<ul id="social-links">
+    <li id="social-link-linkedin"><a href="https://www.linkedin.com/company/10542569/" rel="me">LinkedIn</a></li>
+    <li id="social-link-instagram"><a href="https://www.instagram.com/greenhill01/" rel="me">Instagram</a></li>
+    <li id="social-link-medium"><a href="https://medium.com/@greenhill01" rel="me">Medium</a></li>
+</ul>
+
+</footer>
+
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/main_v4.js"></script>
+
+<script>
+if (navigator.serviceWorker) {
+	navigator.serviceWorker.register('/serviceworker.js');
+    window.addEventListener('load', function() {
+        if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({'command': 'clean up caches'});
+        }
+    });
+}
+</script>
+
+
+
+<script>
+    UA.then(function(sdk) {
+        console.log('UA success');
+
+        // First check if user is already opted in, in which case stop here.
+        if (sdk.channel && sdk.channel.optedIn) {
+            console.log('Already opted in to web push notifications');
+        } else {
+            console.log('Not yet opted in to web push notifications');
+        
+            var elMain = document.querySelector("main");
+
+            var divPushNotificationsPrompt = document.createElement("div");
+            divPushNotificationsPrompt.setAttribute("id", "push-notifications-prompt");
+
+            var pnpHeading = document.createElement("h3");
+            pnpHeading.innerHTML = "Hear about new articles first";
+
+            var pnpIntro = document.createElement("p");
+            pnpIntro.innerHTML = "We use <em>web push notifications</em> to let our subscribers know when we’ve published a new journal entry. Give it a try!";
+
+            var btnWebPushRegister = document.createElement("button");
+            btnWebPushRegister.setAttribute("id", "register");
+            btnWebPushRegister.innerHTML = "Notify me of new articles";
+            
+            divPushNotificationsPrompt.appendChild(pnpHeading);
+            divPushNotificationsPrompt.appendChild(pnpIntro);
+            divPushNotificationsPrompt.appendChild(btnWebPushRegister);
+            elMain.appendChild(divPushNotificationsPrompt);
+
+            document.getElementById('register').addEventListener('click', function() {
+                sdk.register().then(function(response) {
+                    console.log(response);
+
+                    var thanks = document.createElement("p");
+                    thanks.innerHTML = "<b>Thanks</b> – you’re now subscribed.";
+                    divPushNotificationsPrompt.removeChild(btnWebPushRegister);
+                    divPushNotificationsPrompt.appendChild(thanks);
+
+                }).catch(function(error) {
+                    console.log(error);
+                });
+            });
+        }
+    }).catch(function(err) {
+        console.log('UA fail');
+        console.log(err)
+    })
+</script>
+
+</body>
+</html>
